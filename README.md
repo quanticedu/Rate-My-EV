@@ -1,22 +1,23 @@
 # Rate-My-EV
 A web application that tracks customer reviews of EVs
+
 Copyright 2021 Quantic School of Business and Technology
 
 To build this app on a single machine for development:
 1. Install NodeJS and npm (https://nodejs.org/en/download/ for download and instructions)
 2. Install MySQL Server (https://dev.mysql.com/downloads/mysql/8.0.html for download and instructions)
 3. Start the MySQL shell
-   a. Mac: `/usr/local/mysql/bin/mysql --user=root --password`
-   b. Linux: TBD
-   c. Windows: open the MySQL Shell app then enter:  `\connect root@localhost`
+   * Mac: `/usr/local/mysql/bin/mysql --user=root --password`
+   * Linux: TBD
+   * Windows: open the MySQL Shell app then enter:  `\connect root@localhost`
 4. In the MySQL shell, execute the following commands:
-   a. `CREATE USER 'Quantic_Dev'@'localhost' IDENTIFIED BY 'Quantic_Dev';`
-   b. `GRANT ALL ON ev_ratings.* TO 'Quantic_Dev'@'localhost';`
-   c. `CREATE USER 'ratemyev_user'@'localhost' IDENTIFIED BY 'ratemyev_user';`
-   d. `GRANT DELETE, INSERT, SELECT, UPDATE ON ev_ratings.* TO 'ratemyev_user'@'localhost';`
+   * `CREATE USER 'Quantic_Dev'@'localhost' IDENTIFIED BY 'Quantic_Dev';`
+   * `GRANT ALL ON ev_ratings.* TO 'Quantic_Dev'@'localhost';`
+   * `CREATE USER 'ratemyev_user'@'localhost' IDENTIFIED BY 'ratemyev_user';`
+   * `GRANT DELETE, INSERT, SELECT, UPDATE ON ev_ratings.* TO 'ratemyev_user'@'localhost';`
 5. Exit MySQL then fork and clone the repo using this command: `git clone <url>`
    (find the url in GitHub using the Code button in the repo)
-   a. If you're asked for a username and password, enter your username as normal
+   * If you're asked for a username and password, enter your username as normal
       but then for the password you need to enter your Personal Access Token
       and not your GitHub account password. For more information on PAT see
       https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token.
@@ -35,8 +36,8 @@ refreshing when you make changes to their code):
    command: `node server`
 2. In each of the admin and client directories, start the React apps
    with this command: `npm start`
-   a. A browser window for each app should automatically start.
-   b. Note that one of the clients will be running on port 3000 and the
+   * A browser window for each app should automatically start.
+   * Note that one of the clients will be running on port 3000 and the
       other on port 3001.
   
 To run this app in production mode (i.e. with the clients served as
