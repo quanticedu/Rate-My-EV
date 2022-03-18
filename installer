@@ -1,0 +1,9 @@
+#!/bin/bash
+npm install
+cd admin
+npm install
+npm run build
+cd ../client
+npm install
+npm run build
+cd ..
