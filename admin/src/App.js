@@ -4,6 +4,7 @@ import AddTestToken from './addTestToken';
 import ShowUnusedTokens from './showUnusedTokens';
 import DeleteTestData from './deleteTestData';
 import ManageHeaders from './manageHeaders';
+import LoadTest from './loadTest';
 
 const App = () => {
   // enumeration of the types of controls.
@@ -23,7 +24,11 @@ const App = () => {
     MANAGE_HEADERS: {
                        ReactControl: ManageHeaders,
                        MenuItem: 'Manage Headers',
-    }
+    },
+    LOAD_TEST: {
+                  ReactControl: LoadTest,
+                  MenuItem: 'Load Test',
+    },
   };
 
   // 
