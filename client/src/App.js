@@ -56,6 +56,7 @@ const App = () => {
       }
       <RatingsView show={view === viewTypes.SHOW_RATINGS} showTestData={isTest} />
       <AddRating show={view === viewTypes.ADD_RATING} tokenValue={token} createAsTest={isTest} />
+      <a className="onGreenBg" href="/admin">Go to admin page</a>
     </div>
   );
 };
