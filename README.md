@@ -9,7 +9,7 @@ To build this app on a single machine for development (N.B.: these instructions 
 3. Start the MySQL shell
    * Mac: `/usr/local/mysql/bin/mysql --user=root --password`
    * Linux: TBD
-   * Windows: open the MySQL Shell app then enter:  `\connect root@localhost`
+   * Windows: open the MySQL Shell app then enter:  `\connect root@localhost`. If the prompt ends with `JS`, enter this command: `\sql`.
 4. In the MySQL shell, execute the following commands:
    * `CREATE USER 'Quantic_Dev'@'localhost' IDENTIFIED BY 'Quantic_Dev';`
    * `GRANT ALL ON ev_ratings.* TO 'Quantic_Dev'@'localhost';`
