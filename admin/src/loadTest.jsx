@@ -7,20 +7,27 @@ const LoadTest = () => {
     //   requestsPerSecond: the number of requests to send each second
     //   serverError: if not null, show a dialog with the error
     //   backlog: number of requests not yet responded to
+    //   answered: number of requests answered
     const [requestsPerSecond, setRequestsPerSecond] = useState(0.5);
     const [serverError, setServerError] = useState(null);
     const [backlog, setBacklog] = useState(0);
+    const [answered, setAnswered] = useState(0);
 
     // Ref:
     //   intervalID: the ID of the latest setInterval call
     //   pendingRequests: the number of pending requests
+    //   answeredRequests the number of answered requests
     const intervalID = useRef(null);
     const pendingRequests = useRef(0);
+    const answeredRequests = useRef(0);
 
     const responseReceived = () => {
         let v = pendingRequests.current;
         pendingRequests.current = v - 1;
         setBacklog(pendingRequests.current);
+        v = answeredRequests.current;
+        answeredRequests.current = v + 1;
+        setAnswered(answeredRequests.current);
     }
 
     const responseError = (err) => {
@@ -80,6 +87,7 @@ const LoadTest = () => {
                         step="0.1" 
                         onChange={(event) => { setNewFrequency(event.target.value); }}
                         />
+                    <p>Answered requests: {answered}</p>
                     <p>Unanswered requests: {backlog}</p>
                     <Modal show={serverError}>
                         <p>The server reported the following error: {serverError}</p>
