@@ -4,10 +4,10 @@ A web application that tracks customer reviews of EVs
 Copyright 2021 Quantic School of Business and Technology
 
 To build this app on a single machine for development (N.B.: these instructions aren't sufficient to install on cloud servers):
-1. Install NodeJS and npm (https://nodejs.org/en/download/ for download and instructions)
-2. Install MySQL Server (https://dev.mysql.com/downloads/mysql/8.0.html for download and instructions)
+1. Install NodeJS and npm (https://nodejs.org/en/download/ for download and instructions). We recommend using the Prebuilt Installer.
+2. Install MySQL Server (https://dev.mysql.com/downloads/mysql for download and instructions). For Windows, we recommend using the MSI Installer. For MacOS, we recommend using the DMG package appropriate for your architecture.
 3. Start the MySQL shell
-   * Mac: `/usr/local/mysql/bin/mysql --user=root --password`
+   * Mac: `/usr/local/mysql/bin/mysql --user=root --password`. If you get an error about not being able to connect, go to the System Preferences panel, select MySQL, then Configuration, then uncheck Keyring Data File, then go to Instances and start the server.
    * Linux: TBD
    * Windows: open the MySQL Shell app then enter:  `\connect root@localhost`. If the prompt ends with `JS`, enter this command: `\sql`.
 4. In the MySQL shell, execute the following commands:
