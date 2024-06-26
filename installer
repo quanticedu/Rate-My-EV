@@ -1,9 +1,14 @@
 #!/bin/bash
+echo "Installing back end dependencies"
 npm install
 cd admin
+echo "Installing admin app dependencies"
 npm install
+echo "Building admin app"
 npm run build
 cd ../client
+echo "Installing client app dependencies"
 npm install
+echo "Building client app"
 npm run build
 cd ..
